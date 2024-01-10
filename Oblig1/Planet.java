@@ -3,7 +3,7 @@ public class Planet {
     private double radius;
     private double masse;
 
-    public void Planet(String navn, double radius, double masse) {
+    public Planet(String navn, double radius, double masse) {
         this.navn = navn;
         this.radius = radius;
         this.masse = masse;
@@ -32,5 +32,4 @@ public class Planet {
     public void setMasse(double masse) {
         this.masse = masse;
     }
-
 }
