@@ -36,7 +36,11 @@ public class Bonus3_3 {
 
                 System.out.println(planet.getNavn() + " has a radius of " + planet.getRadius() + "km and a mass of " +
                         planet.getMasse() + "kg");
-
+            }
+                else if (menuChoices.equals("remove")) {
+                    System.out.println("Which planet would you like to remove?: ");
+                    String planetToRemove = scanner.nextLine();
+                    planets.removeIf(planet -> planet.getNavn().equals(planetToRemove));
             }
 
 
