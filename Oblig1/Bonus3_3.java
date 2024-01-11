@@ -9,23 +9,36 @@ public class Bonus3_3 {
 
         while (registering) {  // Code added for oppgave 3.2
 
-            System.out.print("Enter the name of the planet:");
-            String planetName = scanner.nextLine();
+            // PRINT MENU
+            // 1 to ADD, 2 to REMOVE, 3 to LIST, 4 to UPDATE
+            // If checks for CHOICES and ACTIONS.
 
-            System.out.print("Enter the radius of the planet:");
-            double planetRadius = scanner.nextDouble();
+            System.out.println("Type add to ADD planet. Type remove to REMOVE planet. Type" +
+                    " print to PRINT planets. Type update to UPDATE an entry. Choose what you want to do: ");
+            String menuChoices = scanner.nextLine();
 
-            System.out.print("Enter the mass of the planet:");
-            double planetMass = scanner.nextDouble();
+            if (menuChoices.equals("add")) {
 
-            scanner.nextLine();
+                System.out.print("Enter the name of the planet:");
+                String planetName = scanner.nextLine();
 
-            Planet planet = new Planet(planetName, planetRadius, planetMass);
+                System.out.print("Enter the radius of the planet:");
+                double planetRadius = scanner.nextDouble();
 
-            planets.add(planet);
+                System.out.print("Enter the mass of the planet:");
+                double planetMass = scanner.nextDouble();
 
-            System.out.println(planet.getNavn() + " has a radius of " + planet.getRadius() + "km and a mass of " +
-                    planet.getMasse() + "kg");
+                scanner.nextLine(); //Used to "eat up" the empty line after scanner reads double.
+
+                Planet planet = new Planet(planetName, planetRadius, planetMass);
+
+                planets.add(planet);
+
+                System.out.println(planet.getNavn() + " has a radius of " + planet.getRadius() + "km and a mass of " +
+                        planet.getMasse() + "kg");
+
+            }
+
 
             // Code added for oppgave 3.2
             System.out.print("Do you wish to continue registering planets? Answer yes or no: ");
@@ -34,8 +47,7 @@ public class Bonus3_3 {
             if (answer.equals("no")) {
                 registering = false;
             }
-
-        System.out.println(planets);
+            //System.out.println(planets);
         }
     }
 }
