@@ -42,8 +42,14 @@ public class Bonus3_3 {
                     String planetToRemove = scanner.nextLine();
                     planets.removeIf(planet -> planet.getNavn().equals(planetToRemove));
             }
+                else if (menuChoices.equals("print")) {
+                    for (Planet planet : planets) {
+                        System.out.println("Name: " + planet.getNavn() + ". | Radius: " + planet.getRadius() + "km. "
+                                + "| Mass: " + planet.getMasse() + "kg");
+                    }
+            }
 
-
+            // WHAT TO DO WITH CODE BELOW.... ?
             // Code added for oppgave 3.2
             System.out.print("Do you wish to continue registering planets? Answer yes or no: ");
             String answer = scanner.nextLine();
