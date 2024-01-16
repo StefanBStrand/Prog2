@@ -17,6 +17,8 @@ public class Bonus3_3 {
                     " print to PRINT planets. Type update to UPDATE an entry. Choose what you want to do: ");
             String menuChoices = scanner.nextLine();
 
+            //using a switch instead of multiple else if -statements, below!
+
             switch (menuChoices) {
                 case "add" -> {
 
@@ -39,6 +41,7 @@ public class Bonus3_3 {
                     System.out.println(planet.getNavn() + " has a radius of " + planet.getRadius() + "km and a mass of " +
                             planet.getMasse() + "kg");
                 }
+
                 case "remove" -> {
                     System.out.println("Which planet would you like to remove?: ");
                     String planetToRemove = scanner.nextLine();
@@ -53,14 +56,27 @@ public class Bonus3_3 {
                 case "update" -> {
                     System.out.println("Which planet would you like to update?");
                     String planetToUpdate = scanner.nextLine();
-
-                }
-                default -> {
-                    // WHAT TO DO WITH CODE BELOW.... ?
-                    // Code added for oppgave 3.2
-                    System.out.print("Do you wish to continue registering planets? Answer yes or no: ");
+                    for (Planet planet : planets) {
+                        if (planetToUpdate.equals(planet.getNavn())) {
+                            System.out.println("Enter new name of planet:");
+                            String newName = scanner.nextLine();
+                            planet.setNavn(newName);
+                            System.out.println("Enter new radius of planet:");
+                            double newRadius = scanner.nextDouble();
+                            planet.setRadius(newRadius);
+                            scanner.nextLine(); //added to eat empty space after reading Double
+                            System.out.println("Enter new mass of planet:");
+                            double newMass = scanner.nextDouble();
+                            planet.setMasse(newMass);
+                            scanner.nextLine(); //eat empty space
+                            System.out.println("Here is your updated planet: Name: " + newName +  " | Radius: "
+                                    + newRadius + " | Mass: " + newMass);
+                        }
+                    }
                 }
             }
+
+            System.out.print("Do you wish to continue the program? Answer yes or no: ");
             String answer = scanner.nextLine();
 
             if (answer.equals("no")) {
