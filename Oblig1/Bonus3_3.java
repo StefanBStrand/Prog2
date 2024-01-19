@@ -5,19 +5,15 @@ public class Bonus3_3 {
         Scanner scanner = new Scanner(System.in);
 
         ArrayList<Planet> planets = new ArrayList<>();
-        boolean registering = true; // Code added for oppgave 3.2
+        boolean registering = true;
 
-        while (registering) {  // Code added for oppgave 3.2
-
-            // PRINT MENU
-            // 1 to ADD, 2 to REMOVE, 3 to LIST, 4 to UPDATE
-            // If checks for CHOICES and ACTIONS.
+        while (registering) {
 
             System.out.println("Type add to ADD planet. Type remove to REMOVE planet. Type" +
                     " print to PRINT planets. Type update to UPDATE an entry. Choose what you want to do: ");
             String menuChoices = scanner.nextLine();
 
-            //using a switch instead of multiple else if -statements, below!
+            //using a switch instead of multiple else if -statements.
 
             switch (menuChoices) {
                 case "add" -> {
@@ -33,7 +29,6 @@ public class Bonus3_3 {
 
                     scanner.nextLine(); //Used to "eat up" the empty line after scanner reads double.
 
-
                     Planet planet = new Planet(planetName, planetRadius, planetMass);
 
                     planets.add(planet);
@@ -46,6 +41,7 @@ public class Bonus3_3 {
                     System.out.println("Which planet would you like to remove?: ");
                     String planetToRemove = scanner.nextLine();
                     planets.removeIf(planet -> planet.getNavn().equals(planetToRemove));
+                    System.out.println("You have removed the planet " + planetToRemove);
                 }
                 case "print" -> {
                     for (Planet planet : planets) {
@@ -56,15 +52,19 @@ public class Bonus3_3 {
                 case "update" -> {
                     System.out.println("Which planet would you like to update?");
                     String planetToUpdate = scanner.nextLine();
+
                     for (Planet planet : planets) {
                         if (planetToUpdate.equals(planet.getNavn())) {
                             System.out.println("Enter new name of planet:");
                             String newName = scanner.nextLine();
                             planet.setNavn(newName);
+
                             System.out.println("Enter new radius of planet:");
                             double newRadius = scanner.nextDouble();
                             planet.setRadius(newRadius);
+
                             scanner.nextLine(); //added to eat empty space after reading Double
+
                             System.out.println("Enter new mass of planet:");
                             double newMass = scanner.nextDouble();
                             planet.setMasse(newMass);
@@ -82,7 +82,6 @@ public class Bonus3_3 {
             if (answer.equals("no")) {
                 registering = false;
             }
-            //System.out.println(planets);
         }
     }
 }

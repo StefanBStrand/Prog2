@@ -3,7 +3,7 @@ public class Bonus3_1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        boolean registering = true; // Code added for oppgave 3.2
+        boolean registering = true; // Code added for oppgave 3.2 (This file is bonus task 3.1 and 3.2 in one)
 
         while (registering) {  // Code added for oppgave 3.2
 
