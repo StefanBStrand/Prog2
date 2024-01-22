@@ -28,4 +28,9 @@ public class Planet {
     public void setMass(double mass) {
         this.mass = mass;
     }
+    @Override
+    public String toString() {
+        return "Planet name: " + name // CONTINUE HERE! ***********
+    }
+
 }

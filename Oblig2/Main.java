@@ -13,6 +13,14 @@ public class Main {
 
         ArrayList<Planet> myPlanets = new ArrayList<>();
 
-        //PlanetSystem solarSystem = new PlanetSystem("Solar system","Sun", ArrayList<Planet>)
+        myPlanets.add(mercury);
+        myPlanets.add(venus);
+        myPlanets.add(earth);
+        myPlanets.add(mars);
+        myPlanets.add(jupiter);
+
+
+
+        PlanetSystem solarSystem = new PlanetSystem("Solar system","Sun", myPlanets);
     }
 }
