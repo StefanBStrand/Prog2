@@ -31,4 +31,8 @@ public class PlanetSystem {
     public void addPlanet(Planet planet) {
         planets.add(planet);
     }
+    @Override
+    public String toString() {
+        return "Name of planet system: " + name + " | Center star: " + centerStar + " | Planets: " + planets;
+    }
 }

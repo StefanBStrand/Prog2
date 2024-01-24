@@ -10,6 +10,18 @@ public class Planet {
         this.radius = radius;
         this.mass = mass;
     }
+
+    public double getRadiusInKm() {
+        double rjup = 71492;
+        return radius * rjup;
+    }
+
+    public double getMassInKg() {
+        double mjup = 1.898e27;
+        return mass * mjup;
+    }
+
+
     public String getName() {
         return name;
     }
@@ -30,7 +42,6 @@ public class Planet {
     }
     @Override
     public String toString() {
-        return "Planet name: " + name // CONTINUE HERE! ***********
+        return "Planet name: " + name + " | Planet radius: " + radius + " | Planet mass: " + mass;
     }
-
 }

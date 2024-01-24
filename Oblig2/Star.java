@@ -37,5 +37,10 @@ public class Star {
     public void setEffectiveTemp(double effectiveTemp) {
         this.effectiveTemp = effectiveTemp;
     }
+    @Override
+    public String toString() {
+        return "Star name: " + name + "| Star radius: " + radius + "| Star mass: " + mass + "| Star effective temp; "
+                + effectiveTemp;
+    }
 
 }
