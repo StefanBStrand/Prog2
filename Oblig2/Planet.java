@@ -5,23 +5,35 @@ public class Planet {
 
     private double mass;
 
+    public static final double RJUP = 71492;
+    public static final double MJUP = 1.898e27;
+
+    private static final double G = 6.67408e-11;
+
+
     public Planet(String name, double radius, double mass) {
         this.name = name;
         this.radius = radius;
         this.mass = mass;
     }
-
+    // Oppg 2.4 - Method for Planet.
     public double getRadiusInKm() {
-        double rjup = 71492;
-        return radius * rjup;
+        return radius * RJUP;
     }
-
+    // Oppg 2.4 - Method for Planet
     public double getMassInKg() {
-        double mjup = 1.898e27;
-        return mass * mjup;
+        return mass * MJUP;
     }
 
+    public double surfaceGravity() {
+        double radiusInMeters = getRadiusInKm() * 1000;
+        double radiusSqared = Math.pow(radiusInMeters, 2);
+        double g = G * getMassInKg() / radiusSqared;
+        return g;
 
+    }
+
+    // Oppg. 2.1 - Classes, getters and setters.
     public String getName() {
         return name;
     }
@@ -40,7 +52,7 @@ public class Planet {
     public void setMass(double mass) {
         this.mass = mass;
     }
-    @Override
+    @Override // oppg. 2.3
     public String toString() {
         return "Planet name: " + name + " | Planet radius: " + radius + " | Planet mass: " + mass;
     }

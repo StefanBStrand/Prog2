@@ -11,7 +11,9 @@ public class Main {
         Planet venus = new Planet("Venus", 0.08465003077267387, 0.002564278187565859);
         Planet earth = new Planet("Earth", 0.08911486599899289, 0.003146469968387777);
         Planet mars = new Planet("Mars", 0.04741089912158004, 3.3667017913593256e-4);
-        Planet jupiter = new Planet("Jupiter", 71492, 1.898e27);
+        Planet jupiter = new Planet("Jupiter", Planet.RJUP, Planet.MJUP);
+        Planet saturn = new Planet("Saturn", 0.8145247020645666, 0.2994204425711275);
+        Planet neptune = new Planet("Neptune", 0.34440217087226543, 0.05395152792413066);
 
         ArrayList<Planet> myPlanets = new ArrayList<>();
 
@@ -20,8 +22,13 @@ public class Main {
         myPlanets.add(earth);
         myPlanets.add(mars);
         myPlanets.add(jupiter);
+        myPlanets.add(saturn);
+        myPlanets.add(neptune);
 
-        PlanetSystem solarSystem = new PlanetSystem("Solar system","Sun", myPlanets);
+
+        Star sun = new Star("Sun", Star.RSUN, Star.MSUN, 5777);
+
+        PlanetSystem solarSystem = new PlanetSystem("Solar system","Sun", myPlanets); // Oppg. 2.2
 
         System.out.println(solarSystem);
 
@@ -29,7 +36,13 @@ public class Main {
         System.out.println(mars);
         System.out.println(earth);
 
-        System.out.println(mars.getMassInKg());
-        System.out.println(mars.getRadiusInKm());
+        //Oppg. 2.4:
+        System.out.println("Mass: " + saturn.getMassInKg() + " kg." + " Radius: " + saturn.getRadiusInKm() + " km");
+        System.out.println("Mass: " + sun.getMassInKg() + " kg." + " Radius: " + sun.getRadiusInKm() + " km");
+
+        System.out.println("The surface gravity on Neptune is " + neptune.surfaceGravity() + " m/s2"); // Oppg 2.4
+
+        System.out.println("The smallest planet in the solar system is: " + solarSystem.getSmallestPlanet());
+
     }
 }

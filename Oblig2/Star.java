@@ -7,12 +7,24 @@ public class Star {
 
     private double effectiveTemp;
 
+    public static final double MSUN = 1.98892e30;
+    public static final double RSUN = 695700;
+
     public Star(String name, double radius, double mass, double effectiveTemp) {
         this.name = name;
         this.radius = radius;
         this.mass = mass;
         this.effectiveTemp = effectiveTemp;
     }
+
+    public double getRadiusInKm() {
+        return RSUN;
+    }
+
+    public double getMassInKg() {
+        return MSUN;
+    }
+
     public String getName() {
         return name;
     }

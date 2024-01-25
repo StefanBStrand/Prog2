@@ -13,6 +13,21 @@ public class PlanetSystem {
         this.planets = planets;
     }
 
+    public Planet getSmallestPlanet() {
+        Planet smallestPLanet = planets.getFirst();
+        for (Planet planet : planets) {
+            if (planet.getRadiusInKm() < smallestPLanet.getRadiusInKm()) {
+                smallestPLanet = planet;
+            }
+            else if (planet.getRadiusInKm() == smallestPLanet.getRadiusInKm()) {
+                if (planet.getMassInKg() < smallestPLanet.getMassInKg()) {
+                   smallestPLanet = planet;
+                }
+            }
+        }
+        return smallestPLanet;
+    }
+
     public String getName() {
         return name;
     }
