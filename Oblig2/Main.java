@@ -46,5 +46,9 @@ public class Main {
         System.out.println("The smallest planet in the solar system is: " + solarSystem.getSmallestPlanet());
         System.out.println("The biggest planet in the solar system is: " + solarSystem.getLargestPlanet());
 
+        // Bonus 3.2
+        System.out.println("The mass in MEARTH for Mars is " + mars.getMassInMEARTH());
+        System.out.println("The radius in REARTH for Mars is " + mars.getRadiusInREARTH());
+
     }
 }
