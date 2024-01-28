@@ -12,7 +12,7 @@ public class PlanetSystem {
         this.centerStar = centerStar;
         this.planets = planets;
     }
-
+    // Bonus 3.1
     public Planet getSmallestPlanet() {
         Planet smallestPLanet = planets.getFirst();
         for (Planet planet : planets) {
@@ -26,6 +26,22 @@ public class PlanetSystem {
             }
         }
         return smallestPLanet;
+    }
+    //Bonus 3.1
+    public Planet getLargestPlanet() {
+        Planet largestPlanet = planets.getFirst();
+        for (Planet planet : planets) {
+            if (planet.getRadiusInKm() > largestPlanet.getRadiusInKm()) {
+                largestPlanet = planet;
+            }
+            else if (planet.getRadiusInKm() == largestPlanet.getRadiusInKm()) {
+                if (planet.getMassInKg() > largestPlanet.getMassInKg()) {
+                    largestPlanet = planet;
+                }
+            }
+
+        }
+        return largestPlanet;
     }
 
     public String getName() {

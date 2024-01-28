@@ -40,9 +40,11 @@ public class Main {
         System.out.println("Mass: " + saturn.getMassInKg() + " kg." + " Radius: " + saturn.getRadiusInKm() + " km");
         System.out.println("Mass: " + sun.getMassInKg() + " kg." + " Radius: " + sun.getRadiusInKm() + " km");
 
-        System.out.println("The surface gravity on Neptune is " + neptune.surfaceGravity() + " m/s2"); // Oppg 2.4
+        System.out.println("The surface gravity on Neptune is " + neptune.surfaceGravity() + " m/s2"); // Oppg 2.5
 
+        // Bonus 3.1
         System.out.println("The smallest planet in the solar system is: " + solarSystem.getSmallestPlanet());
+        System.out.println("The biggest planet in the solar system is: " + solarSystem.getLargestPlanet());
 
     }
 }

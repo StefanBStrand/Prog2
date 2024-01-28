@@ -27,8 +27,8 @@ public class Planet {
 
     public double surfaceGravity() {
         double radiusInMeters = getRadiusInKm() * 1000;
-        double radiusSqared = Math.pow(radiusInMeters, 2);
-        double g = G * getMassInKg() / radiusSqared;
+        double radiusSquared = Math.pow(radiusInMeters, 2);
+        double g = G * getMassInKg() / radiusSquared;
         return g;
 
     }
