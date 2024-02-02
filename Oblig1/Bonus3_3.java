@@ -4,7 +4,8 @@ public class Bonus3_3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<Planet> planets = new ArrayList<>();
+        ArrayList<Planet> planets = new ArrayList<>(); // creating new ArrayList. Declaring what it "takes" as input.
+        // named planets.
         boolean registering = true;
 
         while (registering) {
@@ -29,9 +30,10 @@ public class Bonus3_3 {
 
                     scanner.nextLine(); //Used to "eat up" the empty line after scanner reads double.
 
-                    Planet planet = new Planet(planetName, planetRadius, planetMass);
+                    Planet planet = new Planet(planetName, planetRadius, planetMass); // creating new Planet object
+                    // named planet.
 
-                    planets.add(planet);
+                    planets.add(planet); // adding planet to object to ArrayList (planets).
 
                     System.out.println(planet.getNavn() + " has a radius of " + planet.getRadius() + "km and a mass of " +
                             planet.getMasse() + "kg");

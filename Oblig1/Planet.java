@@ -22,7 +22,7 @@ public class Planet { // Declaring a class called Planet.
         return masse;
     }
 
-    public void setNavn(String navn) {
+    public void setNavn(String navn) { // setters. takes a parameter "navn", so that a new name can be passed.
         this.navn = navn;
     }
 

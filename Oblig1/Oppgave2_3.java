@@ -1,5 +1,6 @@
 public class Oppgave2_3 {
     public static void main(String[] args) {
+        // creating new instances of Planet class.
         Planet mars = new Planet("Mars", 3389.5, 6.39e23);
         Planet tellus = new Planet("Tellus", 6371, 5.97e24);
         Planet jupiter = new Planet("Jupiter", 69911, 1.898e27);
