@@ -1,9 +1,7 @@
+
 import java.util.ArrayList;
 
 public class Main {
-    // First create Planet objects (from Planet class)
-    // When created some planet-objects, create new array-list to hold these planets - ADD them to list
-    // Finally create a new instance of the PlanetSystem class - and pass all the stuff to it..
     public static void main(String[] args) {
 
 
@@ -25,29 +23,33 @@ public class Main {
         myPlanets.add(saturn);
         myPlanets.add(neptune);
 
-
+        // Oppg. 2.2
         Star sun = new Star("Sun", Star.RSUN, Star.MSUN, 5777);
-
-        PlanetSystem solarSystem = new PlanetSystem("Solar system","Sun", myPlanets); // Oppg. 2.2
-
-        System.out.println(solarSystem);
+        // Oppg. 2.2
+        PlanetSystem solarSystem = new PlanetSystem("Solar system","Sun", myPlanets);
+        // Oppg 2.3
+        System.out.println("Oppgave 2.3: \n" + solarSystem);
 
         System.out.println(jupiter);
         System.out.println(mars);
         System.out.println(earth);
 
         //Oppg. 2.4:
+        System.out.println("Oppgave 2.4: ");
         System.out.println("Mass: " + saturn.getMassInKg() + " kg." + " Radius: " + saturn.getRadiusInKm() + " km");
         System.out.println("Mass: " + sun.getMassInKg() + " kg." + " Radius: " + sun.getRadiusInKm() + " km");
 
         // Oppg 2.5
+        System.out.println("Oppgave 2.5:");
         System.out.println("The surface gravity on Neptune is " + neptune.surfaceGravity() + " m/s2");
 
         // Bonus 3.1
+        System.out.println("Bonus 3.1: ");
         System.out.println("The smallest planet in the solar system is: " + solarSystem.getSmallestPlanet());
         System.out.println("The biggest planet in the solar system is: " + solarSystem.getLargestPlanet());
 
         // Bonus 3.2
+        System.out.println("Bonus 3.2: ");
         System.out.println("The mass in MEARTH for Mars is " + mars.getMassInMEARTH());
         System.out.println("The radius in REARTH for Mars is " + mars.getRadiusInREARTH());
 

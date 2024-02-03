@@ -17,7 +17,8 @@ public class Star {
         this.effectiveTemp = effectiveTemp;
     }
 
-    public double getRadiusInKm() {
+    public double getRadiusInKm() { // values for sun set to Rsun and Msun - expecting other stars in future obligs
+        // that will have radius and mass relative to "our" sun?
         return RSUN;
     }
 
@@ -49,7 +50,7 @@ public class Star {
     public void setEffectiveTemp(double effectiveTemp) {
         this.effectiveTemp = effectiveTemp;
     }
-    @Override
+    @Override // Clearly stating that toString method is intentionally being overridden.
     public String toString() {
         return "Star name: " + name + "| Star radius: " + radius + "| Star mass: " + mass + "| Star effective temp; "
                 + effectiveTemp;

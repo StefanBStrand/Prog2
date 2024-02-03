@@ -5,7 +5,7 @@ public class Planet {
 
     private double mass;
 
-    public static final double RJUP = 71492;
+    public static final double RJUP = 71492; // This is a constant - set as final.
     public static final double MJUP = 1.898e27;
 
     private static final double MEARTH = 5.972e24;
