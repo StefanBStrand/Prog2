@@ -1,4 +1,4 @@
-public class Planet {
+public class Planet extends CelestialBody {
     private String name;
 
     private double radius;
@@ -16,9 +16,7 @@ public class Planet {
 
 
     public Planet(String name, double radius, double mass) {
-        this.name = name;
-        this.radius = radius;
-        this.mass = mass;
+        super(name, radius, mass);
     }
     // Oppg 2.4 - Method for Planet.
     public double getRadiusInKm() {

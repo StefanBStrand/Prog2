@@ -1,4 +1,4 @@
-public class Star {
+public class Star extends CelestialBody {
     private String name;
 
     private double radius;
@@ -11,19 +11,17 @@ public class Star {
     public static final double RSUN = 695700;
 
     public Star(String name, double radius, double mass, double effectiveTemp) {
-        this.name = name;
-        this.radius = radius;
-        this.mass = mass;
+        super(name, radius, mass);
         this.effectiveTemp = effectiveTemp;
     }
 
     public double getRadiusInKm() { // values for sun set to Rsun and Msun - expecting other stars in future obligs
         // that will have radius and mass relative to "our" sun?
-        return RSUN;
+        return radius * RSUN;
     }
 
     public double getMassInKg() {
-        return MSUN;
+        return mass * MSUN;
     }
 
     public String getName() {
