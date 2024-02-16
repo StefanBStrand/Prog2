@@ -29,6 +29,7 @@ public class Planet extends CelestialBody {
         return G * getMassInKg() / radiusSquared;
     }
 
+
     @Override
     public String toString() {
         return "Planet name: " + getName() + " | Planet radius: " + getRadius() + " | Planet mass: " + getMass();

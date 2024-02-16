@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Collections;
 
 public class PlanetSystem {
     private String name;
@@ -12,7 +10,16 @@ public class PlanetSystem {
         this.centerStar = centerStar;
         this.planets = planets;
     }
-    // Bonus 3.1
+    //Oppgave 2.2 - Oblig3 - (*)
+    public Planet getPlanet(String name) {
+        Planet desiredPlanet = planets.getFirst(); // getting first planet object, stored in desiredPlanet
+        for (Planet planet : planets) {  //iterating through planet systems' planets here
+            if (planet.getName().equals(name)) { // if the planet at hand's name equals name passed to function..
+                desiredPlanet = planet; // ..then the desiredPlanet is set to the current planet in the iteration.
+            }
+        }
+        return desiredPlanet; // returning desired planet.
+    }
     public Planet getSmallestPlanet() {
         Planet smallestPLanet = planets.getFirst();
         for (Planet planet : planets) {
@@ -43,6 +50,7 @@ public class PlanetSystem {
         }
         return largestPlanet;
     }
+
 
     public String getName() {
         return name;
