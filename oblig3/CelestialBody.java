@@ -21,7 +21,7 @@ public class CelestialBody {
     // effectiveTemp is unique to the Star class and does not apply to Planet - this variable has to be kept
     // in Star for clarity. Also, cannot abstract unit-conversion-methods from both classes (like getRadiusInKm)
     // this is because they do not take parameters and cannot be overloaded in CelestialBody - they server
-    // their purpose best in their respective class. 
+    // their purpose best in their respective class.
 
     public CelestialBody(String name, double radius, double mass) {
         this.name = name;
