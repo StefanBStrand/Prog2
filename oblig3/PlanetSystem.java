@@ -10,16 +10,30 @@ public class PlanetSystem {
         this.centerStar = centerStar;
         this.planets = planets;
     }
-    //Oppgave 2.2 - Oblig3 - (*)
+
     public Planet getPlanet(String name) {
+        for (Planet planet : planets) {
+            if (planet.getName().equals(name)) {
+                return planet;
+            }
+        }
+        System.out.println("Sorry, no such planet was found in planet system");
+        return null; // always expecting a return value, in this case Planet or null, for all possible execution paths. 
+    }
+
+    //Oppgave 2.2 - Oblig3 - (*)
+    /* public Planet getPlanet(String name) {
         Planet desiredPlanet = planets.getFirst(); // getting first planet object, stored in desiredPlanet
         for (Planet planet : planets) {  //iterating through planet systems' planets here
             if (planet.getName().equals(name)) { // if the planet at hand's name equals name passed to function..
-                desiredPlanet = planet; // ..then the desiredPlanet is set to the current planet in the iteration.
+                desiredPlanet = planet; // ..then the desiredPlanet-variable is set to the current planet in the
+                // iteration/in the loop.
             }
         }
         return desiredPlanet; // returning desired planet.
-    }
+    } */
+
+
     public Planet getSmallestPlanet() {
         Planet smallestPLanet = planets.getFirst();
         for (Planet planet : planets) {

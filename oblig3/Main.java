@@ -57,6 +57,7 @@ public class Main {
         System.out.println("Oppgave 2.2 - Oblig 3:");
         System.out.println(solarSystem.getPlanet("Saturn"));
         System.out.println(solarSystem.getPlanet("Mars"));
+        System.out.println(solarSystem.getPlanet("Pluto"));
 
     }
 }
