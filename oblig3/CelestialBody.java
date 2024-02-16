@@ -12,6 +12,9 @@ public class CelestialBody {
 
     public static final double REARTH = 6371;
 
+    public static final double MSUN = 1.98892e30;
+    public static final double RSUN = 695700;
+
     public static final double G = 6.67408e-11;
 
     public CelestialBody(String name, double radius, double mass) {
