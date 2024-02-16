@@ -17,6 +17,12 @@ public class CelestialBody {
 
     public static final double G = 6.67408e-11;
 
+    //Oppg. 2.1 - Arv - Potensielle problemer med noen av instansvariablene/metodene som flyttes? :
+    // effectiveTemp is unique to the Star class and does not apply to Planet - this variable has to be kept
+    // in Star for clarity. Also, cannot abstract unit-conversion-methods from both classes (like getRadiusInKm)
+    // this is because they do not take parameters and cannot be overloaded in CelestialBody - they server
+    // their purpose best in their respective class. 
+
     public CelestialBody(String name, double radius, double mass) {
         this.name = name;
         this.radius = radius;
