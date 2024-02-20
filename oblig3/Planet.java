@@ -6,12 +6,34 @@ public class Planet extends CelestialBody {
 
     private double orbitalPeriod;
 
+    // Oppgave 2.3 oblig 3 - I already defined these constants below as desired here in oblig 2.
+    public static final double RJUP = 71492;
+    public static final double MJUP = 1.898e27;
+
+    public static final double MEARTH = 5.972e24;
+
+    public static final double REARTH = 6371;
+
+    public static final double G = 6.67408e-11;
+
     public Planet(String name, double radius, double mass, double semiMajorAxis, double eccentricity, double
                   orbitalPeriod) {
         super(name, radius, mass);
         this.semiMajorAxis = semiMajorAxis;
         this.eccentricity = eccentricity;
         this.orbitalPeriod = orbitalPeriod;
+    }
+
+    public double getSemiMajorAxis() {
+        return semiMajorAxis;
+    }
+
+    public double getEccentricity() {
+        return eccentricity;
+    }
+
+    public double getOrbitalPeriod() {
+        return orbitalPeriod;
     }
 
     public double getRadiusInKm() {
@@ -41,6 +63,8 @@ public class Planet extends CelestialBody {
 
     @Override
     public String toString() {
-        return "Planet name: " + getName() + " | Planet radius: " + getRadius() + " | Planet mass: " + getMass();
+        return "Planet name: " + getName() + " | Planet radius: " + getRadius() + " | Planet mass: " + getMass() +
+                "| Semi major axis: " + getSemiMajorAxis() + "| Eccentricity: " + getEccentricity() +
+                "| Orbital period: " + getOrbitalPeriod();
     }
 }

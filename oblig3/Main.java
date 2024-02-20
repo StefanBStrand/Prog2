@@ -30,6 +30,7 @@ public class Main {
         myPlanets.add(mars);
         myPlanets.add(jupiter);
         myPlanets.add(saturn);
+        myPlanets.add(uranus);
         myPlanets.add(neptune);
 
         // Oppg. 2.2 - Oblig2
@@ -37,28 +38,28 @@ public class Main {
         // Oppg. 2.2 - Oblig2
         PlanetSystem solarSystem = new PlanetSystem("Solar system","Sun", myPlanets);
         // Oppg 2.3 - Oblig2
-        System.out.println("Oppgave 2.3: \n" + solarSystem);
+        System.out.println("Oppgave 2.3 (Oblig2): \n" + solarSystem);
 
         System.out.println(jupiter);
         System.out.println(mars);
         System.out.println(earth);
 
         //Oppg. 2.4: - Oblig2
-        System.out.println("Oppgave 2.4: ");
+        System.out.println("Oppgave 2.4 (Oblig2): ");
         System.out.println("Mass: " + saturn.getMassInKg() + " kg." + " Radius: " + saturn.getRadiusInKm() + " km");
         System.out.println("Mass: " + sun.getMassInKg() + " kg." + " Radius: " + sun.getRadiusInKm() + " km");
 
         // Oppg 2.5 - Oblig2
-        System.out.println("Oppgave 2.5:");
+        System.out.println("Oppgave 2.5 (Oblig2):");
         System.out.println("The surface gravity on Neptune is " + neptune.surfaceGravity() + " m/s2");
 
         // Bonus 3.1 - Oblig2
-        System.out.println("Bonus 3.1: ");
+        System.out.println("Bonus 3.1 (Oblig2): ");
         System.out.println("The smallest planet in the solar system is: " + solarSystem.getSmallestPlanet());
         System.out.println("The biggest planet in the solar system is: " + solarSystem.getLargestPlanet());
 
         // Bonus 3.2 - Oblig2
-        System.out.println("Bonus 3.2: ");
+        System.out.println("Bonus 3.2 (Oblig2): ");
         System.out.println("The mass in MEARTH for Mars is " + mars.getMassInMEARTH());
         System.out.println("The radius in REARTH for Mars is " + mars.getRadiusInREARTH());
 
@@ -66,7 +67,7 @@ public class Main {
         System.out.println("Oppgave 2.2 - Oblig 3:");
         System.out.println(solarSystem.getPlanet("Saturn"));
         System.out.println(solarSystem.getPlanet("Mars"));
-        System.out.println(solarSystem.getPlanet("Pluto"));
+        System.out.println(solarSystem.getPlanet("Pluto")); // Just checking to see if function works as intended.
 
     }
 }
