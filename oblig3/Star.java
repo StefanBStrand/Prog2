@@ -4,7 +4,14 @@ public class Star extends CelestialBody { // setting Class Star to extends (inhe
     // to a star and not shared with a planet.
 
     public Star(String name, double radius, double mass, double effectiveTemp) {
-        super(name, radius, mass); // calling super here - constructro from PlanetSystem.
+        super(name, radius, mass); // calling super here - constructor from PlanetSystem.
+        this.effectiveTemp = effectiveTemp;
+    }
+
+    public double getEffectiveTemp() {
+        return effectiveTemp;
+    }
+    public void setEffectiveTemp(double effectiveTemp) {
         this.effectiveTemp = effectiveTemp;
     }
 
@@ -20,12 +27,7 @@ public class Star extends CelestialBody { // setting Class Star to extends (inhe
         return getMass() * MSUN;
     }
 
-    public double getEffectiveTemp() {
-        return effectiveTemp;
-    }
-    public void setEffectiveTemp(double effectiveTemp) {
-        this.effectiveTemp = effectiveTemp;
-    }
+
     @Override // Clearly stating that toString method is intentionally being overridden.
     public String toString() {
         return "Star name: " + getName() + "| Star radius: " + getRadius() + "| Star mass: " + getMass() +

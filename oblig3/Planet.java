@@ -1,9 +1,17 @@
 public class Planet extends CelestialBody {
 
-    
+    private double semiMajorAxis;
 
-    public Planet(String name, double radius, double mass) {
+    private double eccentricity;
+
+    private double orbitalPeriod;
+
+    public Planet(String name, double radius, double mass, double semiMajorAxis, double eccentricity, double
+                  orbitalPeriod) {
         super(name, radius, mass);
+        this.semiMajorAxis = semiMajorAxis;
+        this.eccentricity = eccentricity;
+        this.orbitalPeriod = orbitalPeriod;
     }
 
     public double getRadiusInKm() {
