@@ -18,7 +18,7 @@ public class PlanetSystem {
             }
         }
         System.out.println("Sorry, no such planet was found in planet system");
-        return null; // always expecting a return value, in this case Planet or null, for all possible execution paths. 
+        return null; // always expecting a return value, in this case Planet or null, for all possible execution paths.
     }
 
     //Oppgave 2.2 - Oblig3 - (*)
