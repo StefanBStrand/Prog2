@@ -7,5 +7,30 @@
 /dataSources/
 /dataSources.local.xml
 
-.DS_Store
+
+# Compiled Java classes
+*.class
+
+# IntelliJ IDEA project files
 .idea/
+*.iml
+
+# Operating system files
+.DS_Store
+
+# Build directories
+out/
+production/
+
+# Package files (uncomment if you do not want to track in Git)
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Documentation files (uncomment if these are auto-generated and you do not want to track in Git)
+*.pdf
+*.docx
