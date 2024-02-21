@@ -1,10 +1,4 @@
-public class Planet extends CelestialBody {
-
-    private double semiMajorAxis;
-
-    private double eccentricity;
-
-    private double orbitalPeriod;
+public class Planet extends NaturalSatellite {
 
     // Oppgave 2.3 oblig 3 - I already defined these constants below as desired here in oblig 2.
     public static final double RJUP = 71492;
@@ -17,23 +11,9 @@ public class Planet extends CelestialBody {
     public static final double G = 6.67408e-11;
 
     public Planet(String name, double radius, double mass, double semiMajorAxis, double eccentricity, double
-                  orbitalPeriod) {
-        super(name, radius, mass);
-        this.semiMajorAxis = semiMajorAxis;
-        this.eccentricity = eccentricity;
-        this.orbitalPeriod = orbitalPeriod;
-    }
+                  orbitalPeriod, CelestialBody centralCelestialBody) {
+        super(name, radius, mass, semiMajorAxis, eccentricity, orbitalPeriod, centralCelestialBody);
 
-    public double getSemiMajorAxis() {
-        return semiMajorAxis;
-    }
-
-    public double getEccentricity() {
-        return eccentricity;
-    }
-
-    public double getOrbitalPeriod() {
-        return orbitalPeriod;
     }
 
     public double getRadiusInKm() {

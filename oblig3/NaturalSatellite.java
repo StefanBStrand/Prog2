@@ -1,4 +1,8 @@
-public class NaturalSatellite extends CelestialBody {
+public class NaturalSatellite extends CelestialBody { // Oppg 2.4a - creating Class Natural satellite with
+    // constructor, getters and setters.
+
+    //Oppg 2.4b - setting NaturalSatellite to extends CelestialBody - because to make calculations
+    // data on a planet and a star is needed - both planet and star are celestial bodies.
 
     public double semiMajorAxis;
 

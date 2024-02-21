@@ -8,7 +8,7 @@ public class Star extends CelestialBody { // setting Class Star to extends (inhe
     public static final double RSUN = 695700;
 
     public Star(String name, double radius, double mass, double effectiveTemp) {
-        super(name, radius, mass); // calling super here - constructor from PlanetSystem.
+        super(name, radius, mass); // calling super here - constructor from CelestialBody.
         this.effectiveTemp = effectiveTemp;
     }
 
