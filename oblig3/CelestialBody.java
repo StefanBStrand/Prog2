@@ -1,4 +1,5 @@
-public class CelestialBody {
+public abstract class CelestialBody { // Oppg 2.5a - setting class to abstract explicitly, as it is not intented
+    //to be instantiated through objects.
     private String name;
 
     private double radius;

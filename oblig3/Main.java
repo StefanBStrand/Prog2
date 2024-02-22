@@ -4,6 +4,8 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
+        // Oppg. 2.4b Oblig3 - Made necessary changes to main.java, adding the additional data for the planets.
+
         Star sun = new Star("Sun", 1.0, 1.0, 5777);
 
         Planet mercury = new Planet("Mercury", 0.03412549655905556, 1.7297154899894627e-4,
@@ -33,9 +35,6 @@ public class Main {
         myPlanets.add(saturn);
         myPlanets.add(uranus);
         myPlanets.add(neptune);
-
-        // Oppg. 2.2 - Oblig2
-
 
         // Oppg. 2.2 - Oblig2
         PlanetSystem solarSystem = new PlanetSystem("Solar system","Sun", myPlanets);
