@@ -1,5 +1,5 @@
 public abstract class CelestialBody { // Oppg 2.5a - setting class to abstract explicitly, as it is not intented
-    //to be instantiated through objects.
+    //to be instantiated.
     private String name;
 
     private double radius;
@@ -8,8 +8,6 @@ public abstract class CelestialBody { // Oppg 2.5a - setting class to abstract e
 
     public static final double MSUN = 1.98892e30;
     public static final double RSUN = 695700;
-
-
 
     //Oppg. 2.1 - Arv - Potensielle problemer med noen av instansvariablene/metodene som flyttes? :
     // effectiveTemp is unique to the Star class and does not apply to Planet - this variable has to be kept
@@ -22,6 +20,9 @@ public abstract class CelestialBody { // Oppg 2.5a - setting class to abstract e
         this.radius = radius;
         this.mass = mass;
     }
+
+    public abstract double getRadiusInKm(); //Oppg. 2.5b - defining abstract methods as required.
+    public abstract double getMassInKg(); //Oppg. 2.5b - defining abstract methods as required.
 
     public String getName() {
         return name;

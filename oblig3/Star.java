@@ -24,13 +24,13 @@ public class Star extends CelestialBody { // setting Class Star to extends (inhe
     //  differentiated - they do not take any parameters (that would differentiate them). Applies to all
     //  conversion-methods.
     
-    // Oppg. 2.3 Olbig3 below - 2 methods using RSUN and MSUN.
-    public double getRadiusInKm() { // values for sun set to Rsun and Msun - expecting other stars in future obligs
-        // that will have radius and mass relative to "our" sun?
+
+    @Override
+    public double getRadiusInKm() { // Oppg 2.5b
         return getRadius() * RSUN;
     }
-
-    public double getMassInKg() {
+    @Override
+    public double getMassInKg() {  // Oppg 2.5b
         return getMass() * MSUN;
     }
 

@@ -15,12 +15,12 @@ public class Planet extends NaturalSatellite {
         super(name, radius, mass, semiMajorAxis, eccentricity, orbitalPeriod, centralCelestialBody);
 
     }
-
-    public double getRadiusInKm() {
+    @Override
+    public double getRadiusInKm() { // Clearly stating override of the abstract class' abstract methods.
         return getRadius() * RJUP;
     }
-
-    public double getMassInKg() {
+    @Override
+    public double getMassInKg() { // Clearly stating override of the abstract class' abstract methods.
         return getMass() * MJUP;
     }
 
