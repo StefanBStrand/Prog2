@@ -10,6 +10,8 @@ public class Planet extends NaturalSatellite {
 
     public static final double G = 6.67408e-11;
 
+    public static final double AU = 149597871;
+
     public Planet(String name, double radius, double mass, double semiMajorAxis, double eccentricity, double
                   orbitalPeriod, CelestialBody centralCelestialBody) {
         super(name, radius, mass, semiMajorAxis, eccentricity, orbitalPeriod, centralCelestialBody);
@@ -38,6 +40,19 @@ public class Planet extends NaturalSatellite {
         double radiusInMeters = getRadiusInKm() * 1000;
         double radiusSquared = Math.pow(radiusInMeters, 2);
         return G * getMassInKg() / radiusSquared;
+    }
+
+
+    // Function will take a planet and its values.
+    // Need to first convert degrees to radians using math.toRadians
+    // a = semimajorAxis (value given i AU)
+    // the function will return distance first in AU, then I can convert this to km. Funct. has to return in km.
+    // r = distance measured in AU. 1 AU = avg distance between earth and the sun.
+    public double distanceToCentralBody(double degrees) {
+        double degreesToRadians = Math.toRadians(degrees);
+        double distanceInAU = getSemiMajorAxis() * ((1 - Math.pow(getEccentricity(), 2)) / (1 + getEccentricity()
+        * Math.cos(degreesToRadians)));
+        return distanceInAU * AU;
     }
 
 

@@ -70,5 +70,16 @@ public class Main {
         System.out.println(solarSystem.getPlanet("Mars"));
         System.out.println(solarSystem.getPlanet("Pluto")); // Just checking to see if function works as intended.
 
+        System.out.println("The distance between Earth and the sun at 0 degrees is: " +
+                earth.distanceToCentralBody(0));
+        System.out.println("The distance between Earth and the sun at 90 degrees is: " +
+                earth.distanceToCentralBody(90));
+        System.out.println("The distance between Earth and the sun at 180 degrees is: " +
+                earth.distanceToCentralBody(180));
+        System.out.println("The distance between Earth and the sun at 270 degrees is: " +
+                earth.distanceToCentralBody(270));
+        System.out.println("The distance between Earth and the sun at 360 degrees is: " +
+                earth.distanceToCentralBody(360));
+
     }
 }

@@ -17,7 +17,7 @@ public abstract class NaturalSatellite extends CelestialBody { // Oppg 2.4a - cr
     public NaturalSatellite(String name, double radius, double mass, double semiMajorAxis, double eccentricity,
                             double orbitalPeriod, CelestialBody centralCelestialBody) {
         super(name, radius, mass);
-        this.semiMajorAxis = semiMajorAxis;
+        this.semiMajorAxis = semiMajorAxis; // Value in AU (astronomical units)
         this.eccentricity = eccentricity;
         this.orbitalPeriod = orbitalPeriod;
         this.centralCelestialBody = centralCelestialBody;
