@@ -70,6 +70,10 @@ public class Main {
         System.out.println(solarSystem.getPlanet("Mars"));
         System.out.println(solarSystem.getPlanet("Pluto")); // Just checking to see if function works as intended.
 
+
+        //TODO: Tips! Her kan du bruke en for-løkke
+        // TODO: Så pen og oversiktlig kode forresten! :)
+        // Oppg. 2.6 a og b
         System.out.println("The distance between Earth and the sun at 0 degrees is: " +
                 earth.distanceToCentralBody(0));
         System.out.println("The distance between Earth and the sun at 90 degrees is: " +
@@ -80,6 +84,10 @@ public class Main {
                 earth.distanceToCentralBody(270));
         System.out.println("The distance between Earth and the sun at 360 degrees is: " +
                 earth.distanceToCentralBody(360));
+
+        //Oppg 2.7 a og b
+        System.out.println("At a distance of 1.47054707e8. earth has a" +
+                " velocity of: " + earth.orbitingVelocity(1.47054707E8));
 
     }
 }
