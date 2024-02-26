@@ -1,6 +1,5 @@
 public class Planet extends NaturalSatellite {
 
-    // Oppgave 2.3 oblig 3 - I already defined these constants below as desired here in oblig 2.
     public static final double RJUP = 71492;
     public static final double MJUP = 1.898e27;
 
@@ -43,21 +42,23 @@ public class Planet extends NaturalSatellite {
     }
 
 
-    // Function will take a planet and its values.
-    // Need to first convert degrees to radians using math.toRadians
-    // a = semimajorAxis (value given i AU)
-    // the function will return distance first in AU, then I can convert this to km. Funct. has to return in km.
-    // r = distance measured in AU. 1 AU = avg distance between earth and the sun.
+    // Oblig 3 oppg. 2.6
     public double distanceToCentralBody(double degrees) {
         double degreesToRadians = Math.toRadians(degrees);
         double distanceInAU = getSemiMajorAxis() * ((1 - Math.pow(getEccentricity(), 2)) / (1 + getEccentricity()
         * Math.cos(degreesToRadians)));
         return distanceInAU * AU;
     }
-    
+
+    // Oblig3  oppg 2.7
     public double orbitingVelocity(double distance) {
         double v = Math.sqrt((G * CelestialBody.MSUN) / (distance * 1000));
         return v / 1000;
+    }
+
+    // Bonus 3.1 - Hastighet 2.0
+    public double orbitingVelocityInMetersPerSecond(double distance) {
+        return orbitingVelocity(distance) * 1000;
     }
 
 

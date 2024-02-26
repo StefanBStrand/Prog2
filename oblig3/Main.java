@@ -99,6 +99,11 @@ public class Main {
         for (double distance : distances) {
             System.out.println("At a distance of " + distance + " Earth has a velocity of " +
                     earth.orbitingVelocity(distance) + " km/s.");
+
+            System.out.println("At a distance of " + distance + " Earth has a velocity of " +
+                    earth.orbitingVelocityInMetersPerSecond(distance) + " m/s.");
         }
+
+
     }
 }
