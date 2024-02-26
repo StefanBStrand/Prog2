@@ -54,12 +54,7 @@ public class Planet extends NaturalSatellite {
         * Math.cos(degreesToRadians)));
         return distanceInAU * AU;
     }
-
-
-    // TODO: distanceToCentralBody skal nok ikke kalles på fra denne metoden. Den må kalles på fra main før du kaller på orbitingVelocity
-    // TODO: Men det er absolutt riktig tenkt!! Eneste som stopper deg fra å gjøre det på måten du tenkte er at foreleser har predefinert metodene...
-    // TODO: Gjelder forresten denne utregning kun for planeter? Eller er det andre himmellegemer/satelitter det er også er relevant for?
-    // TODO: Duktig djuuun! Tydelig at du begynner å forstå dette godt!
+    
     public double orbitingVelocity(double distance) {
         double v = Math.sqrt((G * CelestialBody.MSUN) / (distance * 1000));
         return v / 1000;

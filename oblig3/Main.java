@@ -1,4 +1,5 @@
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Main {
@@ -70,24 +71,34 @@ public class Main {
         System.out.println(solarSystem.getPlanet("Mars"));
         System.out.println(solarSystem.getPlanet("Pluto")); // Just checking to see if function works as intended.
 
+        // Oppg. 2.6 a og b Oblig 3
+        System.out.println("Oppgave 2.6 ab Oblig 3:");
+        int[] degrees = {0, 90, 180, 270, 360};
 
-        //TODO: Tips! Her kan du bruke en for-løkke
-        // TODO: Så pen og oversiktlig kode forresten! :)
-        // Oppg. 2.6 a og b
-        System.out.println("The distance between Earth and the sun at 0 degrees is: " +
-                earth.distanceToCentralBody(0));
-        System.out.println("The distance between Earth and the sun at 90 degrees is: " +
-                earth.distanceToCentralBody(90));
-        System.out.println("The distance between Earth and the sun at 180 degrees is: " +
-                earth.distanceToCentralBody(180));
-        System.out.println("The distance between Earth and the sun at 270 degrees is: " +
-                earth.distanceToCentralBody(270));
-        System.out.println("The distance between Earth and the sun at 360 degrees is: " +
-                earth.distanceToCentralBody(360));
+        for (int degree : degrees) {
+            System.out.println("The distance between Earth and the sun at " + degree + " degrees is: " +
+                    earth.distanceToCentralBody(degree));
+        }
 
+        System.out.println();
+
+        System.out.println("Oppgave 2.7 ab Oblig 3:");
         //Oppg 2.7 a og b
-        System.out.println("At a distance of 1.47054707e8. earth has a" +
-                " velocity of: " + earth.orbitingVelocity(1.47054707E8));
+        int[] degrees2 = {0, 45, 90, 135, 180};
+        double[] distances = new double[degrees2.length];
 
+        for (int i = 0; i < degrees2.length; i++) {
+            int degree = degrees2[i];
+            distances[i] = earth.distanceToCentralBody(degree);
+            System.out.println("The distance between Earth and the sun at " + degree + " degrees is: " +
+                    earth.distanceToCentralBody(degree));
+        }
+
+        System.out.println();
+
+        for (double distance : distances) {
+            System.out.println("At a distance of " + distance + " Earth has a velocity of " +
+                    earth.orbitingVelocity(distance) + " km/s.");
+        }
     }
 }
