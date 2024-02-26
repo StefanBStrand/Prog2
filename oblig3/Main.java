@@ -99,11 +99,27 @@ public class Main {
         for (double distance : distances) {
             System.out.println("At a distance of " + distance + " Earth has a velocity of " +
                     earth.orbitingVelocity(distance) + " km/s.");
-
+            // Bonus 3.1
             System.out.println("At a distance of " + distance + " Earth has a velocity of " +
                     earth.orbitingVelocityInMetersPerSecond(distance) + " m/s.");
         }
 
+        System.out.println();
+        System.out.println("Bonus 3.2 Oblig3");
+        // Bonus 3.2 - Jordavstand
+        double minDistanceFromEarthToSun = earth.distanceToCentralBody(0);
+        double maxDistanceFromEarthToSun = minDistanceFromEarthToSun;
 
+        for (int j = 0; j <= 360; j++) {
+            double currentDistance = earth.distanceToCentralBody(j);
+            if (currentDistance < minDistanceFromEarthToSun) {
+                minDistanceFromEarthToSun = currentDistance;
+            }
+            if (currentDistance > maxDistanceFromEarthToSun) {
+                maxDistanceFromEarthToSun = currentDistance;
+            }
+        }
+        System.out.println("The maximum distance between earth and the sun is " + maxDistanceFromEarthToSun + "km. " +
+                "The minimum distance is " + minDistanceFromEarthToSun + "km.");
     }
 }

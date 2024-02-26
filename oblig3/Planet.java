@@ -61,6 +61,10 @@ public class Planet extends NaturalSatellite {
         return orbitingVelocity(distance) * 1000;
     }
 
+    // Bonus 3.2 - Jordavstand
+    // Use array/for loop to enter each degree (0-360 degrees) - return min and max values and for what degree.
+
+
 
     @Override
     public String toString() {
