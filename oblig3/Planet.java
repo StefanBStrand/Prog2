@@ -61,9 +61,54 @@ public class Planet extends NaturalSatellite {
         return orbitingVelocity(distance) * 1000;
     }
 
-    // Bonus 3.2 - Jordavstand
-    // Use array/for loop to enter each degree (0-360 degrees) - return min and max values and for what degree.
+    // Bonus 3.2 - Jordavstand - Alternativ 1.
+    // Use for loop to iterate over each degree (0-360 degrees) - return min and max values derived from that.
+    public double[] findMaxAndMinDistanceFromCentralBody() {
+        double minDistance = distanceToCentralBody(0);
+        double maxDistance = minDistance;
 
+        for (int degree = 0; degree < 360; degree++) {
+            double currentDistance = distanceToCentralBody(degree);
+            if (currentDistance < minDistance) {
+                minDistance = currentDistance;
+            }
+            if (currentDistance > maxDistance) {
+                maxDistance = currentDistance;
+            }
+        }
+        double[] distances = new double[2];
+
+        distances[0] = minDistance;
+        distances[1] = maxDistance;
+
+        return distances;
+    }
+
+    // Bonus 3.2 - Alternative for maxDistance from Central Body.
+    public double findMaxDistanceFromCentralBody() {
+        double maxDistance = distanceToCentralBody(0);
+
+        for (int degree = 0; degree < 360; degree++) {
+            double currentDistance = distanceToCentralBody(degree);
+            if (currentDistance > maxDistance) {
+                maxDistance = currentDistance;
+            }
+        }
+        return maxDistance;
+    }
+
+    public double findMinDistanceFromCentralBody() {
+        double minDistance = distanceToCentralBody(0);
+
+        for (int degree = 0; degree < 360; degree ++) {
+            double currentDistance = distanceToCentralBody(degree);
+
+            if (currentDistance < minDistance) {
+                minDistance = currentDistance;
+            }
+        }
+        return minDistance;
+    }
 
 
     @Override

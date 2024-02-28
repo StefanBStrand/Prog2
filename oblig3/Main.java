@@ -2,6 +2,7 @@
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 
+
 public class Main {
     public static void main(String[] args) {
 
@@ -105,6 +106,7 @@ public class Main {
         }
 
         System.out.println();
+        
         System.out.println("Bonus 3.2 Oblig3");
         // Bonus 3.2 - Jordavstand
         double minDistanceFromEarthToSun = earth.distanceToCentralBody(0);
@@ -121,5 +123,14 @@ public class Main {
         }
         System.out.println("The maximum distance between earth and the sun is " + maxDistanceFromEarthToSun + "km. " +
                 "The minimum distance is " + minDistanceFromEarthToSun + "km.");
+
+        System.out.println();
+
+        System.out.println("Bonus task 3.2 oblig 3: ");
+        System.out.println("The max distance from the sun for planet Mars is: "
+                +mars.findMaxDistanceFromCentralBody() + "km.");
+        System.out.println("The min distance from the sun for planet Mars is: " +
+                mars.findMinDistanceFromCentralBody() + "km.");
     }
+
 }
