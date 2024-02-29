@@ -51,8 +51,7 @@ public class PlanetSystem {
         }
         return largestPlanet;
     }
-
-
+    
     public String getName() {
         return name;
     }

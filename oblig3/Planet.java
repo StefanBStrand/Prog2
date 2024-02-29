@@ -110,7 +110,6 @@ public class Planet extends NaturalSatellite {
         return minDistance;
     }
 
-
     @Override
     public String toString() {
         return "Planet name: " + getName() + " | Planet radius: " + getRadius() + " | Planet mass: " + getMass() +
