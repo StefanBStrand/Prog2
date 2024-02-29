@@ -66,11 +66,15 @@ public class Main {
         System.out.println("The mass in MEARTH for Mars is " + mars.getMassInMEARTH());
         System.out.println("The radius in REARTH for Mars is " + mars.getRadiusInREARTH());
 
+        System.out.println();
+
         // Oppg 2.2 - Oblig3
         System.out.println("Oppgave 2.2 - Oblig 3:");
         System.out.println(solarSystem.getPlanet("Saturn"));
         System.out.println(solarSystem.getPlanet("Mars"));
         System.out.println(solarSystem.getPlanet("Pluto")); // Just checking to see if function works as intended.
+
+        System.out.println();
 
         // Oppg. 2.6 a og b Oblig 3
         System.out.println("Oppgave 2.6 ab Oblig 3:");
@@ -106,7 +110,7 @@ public class Main {
         }
 
         System.out.println();
-        
+
         System.out.println("Bonus 3.2 Oblig3");
         // Bonus 3.2 - Jordavstand
         double minDistanceFromEarthToSun = earth.distanceToCentralBody(0);
