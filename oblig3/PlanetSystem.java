@@ -10,7 +10,7 @@ public class PlanetSystem {
         this.centerStar = centerStar;
         this.planets = planets;
     }
-
+    // Oppgave 2.2 Oblig 3:
     public Planet getPlanet(String name) {
         for (Planet planet : planets) {
             if (planet.getName().equals(name)) {
@@ -35,7 +35,7 @@ public class PlanetSystem {
         }
         return smallestPLanet;
     }
-    //Bonus 3.1
+    //Bonus 3.1 Oblig2.
     public Planet getLargestPlanet() {
         Planet largestPlanet = planets.getFirst();
         for (Planet planet : planets) {

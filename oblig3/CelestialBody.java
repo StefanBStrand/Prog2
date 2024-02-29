@@ -6,8 +6,6 @@ public abstract class CelestialBody { // Oppg 2.5a - setting class to abstract e
 
     private double mass;
 
-    public static final double MSUN = 1.98892e30;
-    public static final double RSUN = 695700;
 
     public CelestialBody(String name, double radius, double mass) {
         this.name = name;

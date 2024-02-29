@@ -52,7 +52,7 @@ public class Planet extends NaturalSatellite {
 
     // Oblig3  oppg 2.7
     public double orbitingVelocity(double distance) {
-        double v = Math.sqrt((G * CelestialBody.MSUN) / (distance * 1000));
+        double v = Math.sqrt((G * Star.MSUN) / (distance * 1000));
         return v / 1000;
     }
 
