@@ -35,7 +35,7 @@ public class PlanetSystem {
         }
         return smallestPLanet;
     }
-    //Bonus 3.1 Oblig2.
+
     public Planet getLargestPlanet() {
         Planet largestPlanet = planets.getFirst();
         for (Planet planet : planets) {
@@ -51,7 +51,7 @@ public class PlanetSystem {
         }
         return largestPlanet;
     }
-    
+
     public String getName() {
         return name;
     }
