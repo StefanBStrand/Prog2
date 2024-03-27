@@ -75,7 +75,7 @@ public class PlanetSystem implements Comparable<PlanetSystem> {
         return "Name of planet system: " + name + " | Center star: " + centerStar + " | Planets: " + planets;
     }
 
-    // Oppgave 2.1 Oblig 4: 
+    // Oppgave 2.1 Oblig 4:
     @Override
     public int compareTo(PlanetSystem other) {
         return Integer.compare(this.planets.size(), other.planets.size());
