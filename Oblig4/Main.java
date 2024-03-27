@@ -1,6 +1,7 @@
 
 import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class Main {
@@ -108,6 +109,19 @@ public class Main {
                 +mars.findMaxDistanceFromCentralBody() + "km.");
         System.out.println("The min distance from the sun for planet Mars is: " +
                 mars.findMinDistanceFromCentralBody() + "km.");
+
+        System.out.println("Oblig 4, oppg. 2.1:");
+        System.out.println("Before sorting (");
+        for (Planet p : myPlanets) {
+            System.out.println(p.getName() + " | Mass: " + p.getMass());
+        }
+
+        Collections.sort(myPlanets);
+
+        System.out.println("After sorting:");
+        for (Planet p : myPlanets) {
+            System.out.println(p.getName() + " | Mass: " + p.getMass());
+        }
     }
 
 }

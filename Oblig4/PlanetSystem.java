@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class PlanetSystem {
+public class PlanetSystem implements Comparable<PlanetSystem> {
     private String name;
     private String centerStar;
     private ArrayList<Planet> planets;
@@ -73,5 +73,11 @@ public class PlanetSystem {
     @Override
     public String toString() {
         return "Name of planet system: " + name + " | Center star: " + centerStar + " | Planets: " + planets;
+    }
+
+    // Oppgave 2.1 Oblig 4: 
+    @Override
+    public int compareTo(PlanetSystem other) {
+        return Integer.compare(this.planets.size(), other.planets.size());
     }
 }

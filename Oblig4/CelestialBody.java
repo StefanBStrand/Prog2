@@ -1,5 +1,5 @@
-public abstract class CelestialBody { // Oppg 2.5a - setting class to abstract explicitly, as it is not intended
-    //to be instantiated.
+public abstract class CelestialBody implements Comparable<CelestialBody> {
+
     private String name;
 
     private double radius;
@@ -13,8 +13,8 @@ public abstract class CelestialBody { // Oppg 2.5a - setting class to abstract e
         this.mass = mass;
     }
 
-    public abstract double getRadiusInKm(); //Oppg. 2.5b - defining abstract methods as required.
-    public abstract double getMassInKg(); //Oppg. 2.5b - defining abstract methods as required.
+    public abstract double getRadiusInKm();
+    public abstract double getMassInKg();
 
     public String getName() {
         return name;
@@ -33,5 +33,10 @@ public abstract class CelestialBody { // Oppg 2.5a - setting class to abstract e
     }
     public void setMass(double mass) {
         this.mass = mass;
+    }
+
+    @Override // Overriding abstract method from Comparable interface
+    public int compareTo(CelestialBody other) {
+        return Double.compare(this.mass, other.mass);
     }
 }
