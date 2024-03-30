@@ -37,7 +37,7 @@ public class StarCSVFileHandler implements ObjectFileHandler<Star> {
         } catch (IOException e) {
             System.err.println(e.getMessage());
         }
-        System.out.println(stars);
+        System.out.println(stars); // check to see if works as intended.
         return stars;
     }
     }

@@ -22,6 +22,7 @@ public class Main {
 
         List<Star> stars = new ArrayList<>();
 
+        stars.add(sun);
         stars.add(MUCas);
         stars.add(V6947);
         stars.add(YZCas);
@@ -60,84 +61,22 @@ public class Main {
         myPlanets.add(uranus);
         myPlanets.add(neptune);
 
-
         PlanetSystem solarSystem = new PlanetSystem("Solar system","Sun", myPlanets);
-        
-
-        // Oppg. 2.6 a og b Oblig 3
-        System.out.println("Oppgave 2.6 ab Oblig 3:");
-        int[] degrees = {0, 90, 180, 270, 360};
-
-        for (int degree : degrees) {
-            System.out.println("The distance between Earth and the sun at " + degree + " degrees is: " +
-                    earth.distanceToCentralBody(degree));
-        }
-
-        System.out.println();
-
-        System.out.println("Oppgave 2.7 ab Oblig 3:");
-        //Oppg 2.7 a og b
-        int[] degrees2 = {0, 45, 90, 135, 180};
-        double[] distances = new double[degrees2.length];
-
-        for (int i = 0; i < degrees2.length; i++) {
-            int degree = degrees2[i];
-            distances[i] = earth.distanceToCentralBody(degree);
-            System.out.println("The distance between Earth and the sun at " + degree + " degrees is: " +
-                    earth.distanceToCentralBody(degree));
-        }
-
-        System.out.println();
-
-        for (double distance : distances) {
-            System.out.println("At a distance of " + distance + " Earth has a velocity of " +
-                    earth.orbitingVelocity(distance) + " km/s.");
-            // Bonus 3.1
-            System.out.println("At a distance of " + distance + " Earth has a velocity of " +
-                    earth.orbitingVelocityInMetersPerSecond(distance) + " m/s.");
-        }
-
-        System.out.println();
-
-        System.out.println("Bonus 3.2 Oblig3");
-        // Bonus 3.2 - Jordavstand
-        double minDistanceFromEarthToSun = earth.distanceToCentralBody(0);
-        double maxDistanceFromEarthToSun = minDistanceFromEarthToSun;
-
-        for (int j = 0; j <= 360; j++) {
-            double currentDistance = earth.distanceToCentralBody(j);
-            if (currentDistance < minDistanceFromEarthToSun) {
-                minDistanceFromEarthToSun = currentDistance;
-            }
-            if (currentDistance > maxDistanceFromEarthToSun) {
-                maxDistanceFromEarthToSun = currentDistance;
-            }
-        }
-        System.out.println("The maximum distance between earth and the sun is " + maxDistanceFromEarthToSun + "km. " +
-                "The minimum distance is " + minDistanceFromEarthToSun + "km.");
-
-        System.out.println();
-
-        System.out.println("Bonus task 3.2 oblig 3: ");
-        System.out.println("The max distance from the sun for planet Mars is: "
-                +mars.findMaxDistanceFromCentralBody() + "km.");
-        System.out.println("The min distance from the sun for planet Mars is: " +
-                mars.findMinDistanceFromCentralBody() + "km.");
 
         System.out.println("Oblig 4, oppg. 2.1:");
+        System.out.println();
         System.out.println("Before sorting (");
         for (Planet p : myPlanets) {
             System.out.println(p.getName() + " | Mass: " + p.getMass());
         }
 
         Collections.sort(myPlanets);
+        System.out.println();
 
         System.out.println("After sorting:");
         for (Planet p : myPlanets) {
             System.out.println(p.getName() + " | Mass: " + p.getMass());
         }
-
-
 
     }
 
