@@ -28,8 +28,9 @@ public class Main {
         stars.add(NGC188);
         stars.add(zetPhe);
 
-        StarCSVFileHandler writer = new StarCSVFileHandler();
-        writer.writeObjectsToFile(stars, "test-stars.txt");
+        StarCSVFileHandler handler = new StarCSVFileHandler();
+        handler.writeObjectsToFile(stars, "test-stars.txt");
+        handler.readObjectsFromFile("test-stars.txt");
 
         Planet mercury = new Planet("Mercury", 0.03412549655905556, 1.7297154899894627e-4,
                 0.387, 0.206, 88, sun);
@@ -61,14 +62,7 @@ public class Main {
 
 
         PlanetSystem solarSystem = new PlanetSystem("Solar system","Sun", myPlanets);
-
-        // Oppg 2.2 - Oblig3
-        System.out.println("Oppgave 2.2 - Oblig 3:");
-        System.out.println(solarSystem.getPlanet("Saturn"));
-        System.out.println(solarSystem.getPlanet("Mars"));
-        System.out.println(solarSystem.getPlanet("Pluto")); // Just checking to see if function works as intended.
-
-        System.out.println();
+        
 
         // Oppg. 2.6 a og b Oblig 3
         System.out.println("Oppgave 2.6 ab Oblig 3:");
