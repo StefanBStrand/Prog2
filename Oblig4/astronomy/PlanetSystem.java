@@ -1,3 +1,5 @@
+package astronomy;
+
 import java.util.ArrayList;
 
 public class PlanetSystem implements Comparable<PlanetSystem> {
@@ -18,7 +20,7 @@ public class PlanetSystem implements Comparable<PlanetSystem> {
             }
         }
         System.out.println("Sorry, no such planet was found in planet system");
-        return null; // always expecting a return value, in this case Planet or null, for all possible execution paths.
+        return null; // always expecting a return value, in this case astronomy.Planet or null, for all possible execution paths.
     }
 
     public Planet getSmallestPlanet() {

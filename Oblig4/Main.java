@@ -1,8 +1,12 @@
 
-import java.sql.SQLOutput;
+import astronomy.Planet;
+import astronomy.PlanetSystem;
+import astronomy.Star;
+import tools.StarCSVFileHandler;
+
 import java.util.ArrayList;
 import java.util.Collections;
-
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,6 +14,22 @@ public class Main {
         // Oppg. 2.4b Oblig3 - Made necessary changes to main.java, adding the additional data for the planets.
 
         Star sun = new Star("Sun", 1.0, 1.0, 5777);
+        Star MUCas = new Star("MU Cas", 4.192, 4.657, 14750);
+        Star V6947 = new Star("V69-47", 1.316, 0.876, 5945);
+        Star YZCas = new Star("YZ Cas", 2.547, 2.308, 9200);
+        Star NGC188 = new Star("NGC188", 1.425, 1.102, 5900);
+        Star zetPhe = new Star("zet Phe", 2.853, 3.922, 14550);
+
+        List<Star> stars = new ArrayList<>();
+
+        stars.add(MUCas);
+        stars.add(V6947);
+        stars.add(YZCas);
+        stars.add(NGC188);
+        stars.add(zetPhe);
+
+        StarCSVFileHandler writer = new StarCSVFileHandler();
+        writer.writeObjectsToFile(stars, "test-stars.txt");
 
         Planet mercury = new Planet("Mercury", 0.03412549655905556, 1.7297154899894627e-4,
                 0.387, 0.206, 88, sun);
@@ -122,6 +142,9 @@ public class Main {
         for (Planet p : myPlanets) {
             System.out.println(p.getName() + " | Mass: " + p.getMass());
         }
+
+
+
     }
 
 }

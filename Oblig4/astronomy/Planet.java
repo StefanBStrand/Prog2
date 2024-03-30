@@ -1,3 +1,7 @@
+package astronomy;
+
+import astronomy.Star;
+
 public class Planet extends NaturalSatellite {
 
     public static final double RJUP = 71492;
@@ -112,7 +116,7 @@ public class Planet extends NaturalSatellite {
 
     @Override
     public String toString() {
-        return "Planet name: " + getName() + " | Planet radius: " + getRadius() + " | Planet mass: " + getMass() +
+        return "astronomy.Planet name: " + getName() + " | astronomy.Planet radius: " + getRadius() + " | astronomy.Planet mass: " + getMass() +
                 "| Semi major axis: " + getSemiMajorAxis() + "| Eccentricity: " + getEccentricity() +
                 "| Orbital period: " + getOrbitalPeriod();
     }

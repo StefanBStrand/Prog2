@@ -1,4 +1,6 @@
-public class Star extends CelestialBody { // setting Class Star to extends (inheriting from CelestialBody)
+package astronomy;
+
+public class Star extends CelestialBody { // setting Class astronomy.Star to extends (inheriting from astronomy.CelestialBody)
 
     private double effectiveTemp; // Keeping effective temp as an instance variable in star, since this is unique
     // to a star and not shared with a planet.
@@ -7,7 +9,7 @@ public class Star extends CelestialBody { // setting Class Star to extends (inhe
     public static final double RSUN = 695700;
 
     public Star(String name, double radius, double mass, double effectiveTemp) {
-        super(name, radius, mass); // calling super here - constructor from CelestialBody.
+        super(name, radius, mass); // calling super here - constructor from astronomy.CelestialBody.
         this.effectiveTemp = effectiveTemp;
     }
 
@@ -29,8 +31,8 @@ public class Star extends CelestialBody { // setting Class Star to extends (inhe
 
     @Override
     public String toString() {
-        return "Star name: " + getName() + "| Star radius: " + getRadius() + "| Star mass: " + getMass() +
-                "| Star effective temp; "
+        return "astronomy.Star name: " + getName() + "| astronomy.Star radius: " + getRadius() + "| astronomy.Star mass: " + getMass() +
+                "| astronomy.Star effective temp; "
                 + effectiveTemp;
     }
 

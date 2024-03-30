@@ -1,3 +1,5 @@
+package astronomy;
+
 public abstract class CelestialBody implements Comparable<CelestialBody> {
 
     private String name;
