@@ -11,8 +11,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        // Oppg. 2.4b Oblig3 - Made necessary changes to main.java, adding the additional data for the planets.
-
         Star sun = new Star("Sun", 1.0, 1.0, 5777);
         Star MUCas = new Star("MU Cas", 4.192, 4.657, 14750);
         Star V6947 = new Star("V69-47", 1.316, 0.876, 5945);
@@ -29,6 +27,8 @@ public class Main {
         stars.add(NGC188);
         stars.add(zetPhe);
 
+        System.out.println("Oblig 4, 2.2b:");
+        System.out.println();
         StarCSVFileHandler handler = new StarCSVFileHandler();
         handler.writeObjectsToFile(stars, "test-stars.txt");
         handler.readObjectsFromFile("test-stars.txt");
@@ -63,6 +63,7 @@ public class Main {
 
         PlanetSystem solarSystem = new PlanetSystem("Solar system","Sun", myPlanets);
 
+        System.out.println();
         System.out.println("Oblig 4, oppg. 2.1:");
         System.out.println();
         System.out.println("Before sorting (");
@@ -70,7 +71,7 @@ public class Main {
             System.out.println(p.getName() + " | Mass: " + p.getMass());
         }
 
-        Collections.sort(myPlanets);
+        Collections.sort(myPlanets); // Sorting the planets.
         System.out.println();
 
         System.out.println("After sorting:");

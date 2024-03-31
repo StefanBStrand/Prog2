@@ -37,7 +37,8 @@ public abstract class CelestialBody implements Comparable<CelestialBody> {
         this.mass = mass;
     }
 
-    @Override // Overriding abstract method from Comparable interface
+    // Oblig 4, oppg. 2.1:
+    @Override // Overriding abstract method from Comparable interface - "adhering/fulfilling the contract"
     public int compareTo(CelestialBody other) {
         return Double.compare(this.mass, other.mass);
     }
