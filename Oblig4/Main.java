@@ -20,6 +20,8 @@ public class Main {
 
         List<Star> stars = new ArrayList<>();
 
+
+        // Adding stars for oblig 4.
         stars.add(sun);
         stars.add(MUCas);
         stars.add(V6947);
@@ -78,7 +80,5 @@ public class Main {
         for (Planet p : myPlanets) {
             System.out.println(p.getName() + " | Mass: " + p.getMass());
         }
-
     }
-
 }
