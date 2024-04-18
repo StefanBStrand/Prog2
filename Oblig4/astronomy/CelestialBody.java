@@ -43,3 +43,4 @@ public abstract class CelestialBody implements Comparable<CelestialBody> {
         return Double.compare(this.mass, other.mass);
     }
 }
+

@@ -35,5 +35,4 @@ public class Star extends CelestialBody { // setting Class astronomy.Star to ext
                 "| astronomy.Star effective temp; "
                 + effectiveTemp;
     }
-
 }

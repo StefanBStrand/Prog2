@@ -121,3 +121,4 @@ public class Planet extends NaturalSatellite {
                 "| Orbital period: " + getOrbitalPeriod();
     }
 }
+

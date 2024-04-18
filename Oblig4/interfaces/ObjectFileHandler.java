@@ -4,3 +4,4 @@ public interface ObjectFileHandler<T> {
     void writeObjectsToFile(List<T> objects, String filename);
     List<T> readObjectsFromFile(String filename);
 }
+

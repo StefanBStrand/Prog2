@@ -83,3 +83,4 @@ public class PlanetSystem implements Comparable<PlanetSystem> {
         return Integer.compare(this.planets.size(), other.planets.size());
     }
 }
+

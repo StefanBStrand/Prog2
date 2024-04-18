@@ -11,7 +11,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-
         //Stars created from data for Oblig 4.
         Star sun = new Star("Sun", 1.0, 1.0, 5777);
         Star MUCas = new Star("MU Cas", 4.192, 4.657, 14750);
