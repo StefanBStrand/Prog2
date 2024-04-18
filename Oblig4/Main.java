@@ -11,6 +11,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+
+        //Stars created from data for Oblig 4.
         Star sun = new Star("Sun", 1.0, 1.0, 5777);
         Star MUCas = new Star("MU Cas", 4.192, 4.657, 14750);
         Star V6947 = new Star("V69-47", 1.316, 0.876, 5945);
@@ -19,7 +21,6 @@ public class Main {
         Star zetPhe = new Star("zet Phe", 2.853, 3.922, 14550);
 
         List<Star> stars = new ArrayList<>();
-
 
         // Adding stars for oblig 4.
         stars.add(sun);
@@ -31,6 +32,7 @@ public class Main {
 
         System.out.println("Oblig 4, 2.2b:");
         System.out.println();
+
         StarCSVFileHandler handler = new StarCSVFileHandler();
         handler.writeObjectsToFile(stars, "test-stars.txt");
         handler.readObjectsFromFile("test-stars.txt");
